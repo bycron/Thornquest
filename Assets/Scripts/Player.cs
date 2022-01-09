@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bramble : MonoBehaviour
+public class Player : MonoBehaviour
 {
-    [SerializeField] public float playerSpeed;
+    [HideInInspector]
     private Rigidbody2D rb;
     private Animator animate;
     private Vector2 moveAmount;
+    [SerializeField] public float health;
+    [SerializeField] public float playerSpeed;
 
     private void Start() 
     {
@@ -22,8 +24,7 @@ public class Bramble : MonoBehaviour
 
         if (moveInput != Vector2.zero) {
             animate.SetBool("isMoving", true);
-        }
-        else {
+        } else {
             animate.SetBool("isMoving", false);
         }
     }
@@ -31,6 +32,15 @@ public class Bramble : MonoBehaviour
     private void FixedUpdate() 
     {
         rb.MovePosition(rb.position + moveAmount * Time.fixedDeltaTime);
+    }
+
+    public void TakeDamage(int damageAmount)
+    {
+        health -= damageAmount;
+        if (health <= 0) {
+            Destroy(gameObject);
+        }
+
     }
 
 }
