@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 400
   m_Sprite: {fileID: -311914526, guid: b5da6ca7141ec46d69cdd60fba82b864, type: 3}
   m_Color: {r: 0, g: 0.6226415, b: 0.0214245, a: 1}
   m_FlipX: 0
@@ -94,6 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4872294804594375901}
   - component: {fileID: -5567833852636073148}
+  - component: {fileID: 5343920722747064839}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -129,6 +130,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e61b0576cac4c2ab8b54721068d9b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 60
-  lifeTime: 0.4
+  speed: 50
+  lifeTime: 5
   explosion: {fileID: 8330528477519917330, guid: 8a291a9d2dd37464aadfbc077817e828, type: 3}
+  damage: 1
+--- !u!61 &5343920722747064839
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4872294804594375900}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.006877035, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.38108248, y: 1}
+  m_EdgeRadius: 0

@@ -8,6 +8,7 @@ public class Arm : MonoBehaviour
     [SerializeField] public Transform shotPoint;
     [SerializeField] public float timeBetweenShots;
     private float shotTime;
+    
     private void Update()
     {
         Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;

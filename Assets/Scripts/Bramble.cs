@@ -14,6 +14,7 @@ public class Bramble : MonoBehaviour
         animate = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
+    
     private void Update() 
     {
         Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
@@ -26,6 +27,7 @@ public class Bramble : MonoBehaviour
             animate.SetBool("isMoving", false);
         }
     }
+
     private void FixedUpdate() 
     {
         rb.MovePosition(rb.position + moveAmount * Time.fixedDeltaTime);
