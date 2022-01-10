@@ -5,8 +5,8 @@ using UnityEngine;
 public class Melee : Enemy
 {
     private float attackTime;
-    [SerializeField] public float attackSpeed;
-    [SerializeField] public float stopDistance;
+    public float attackSpeed;
+    public float stopDistance;
 
     private void Update() 
     {

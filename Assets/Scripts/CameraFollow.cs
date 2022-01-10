@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    [SerializeField] public Transform playerTransform;
-    [SerializeField] public float speed;
-    [SerializeField] public float minX;
-    [SerializeField] public float maxX;
-    [SerializeField] public float minY;
-    [SerializeField] public float maxY;
+    public Transform playerTransform;
+    public float speed;
+    public float minX;
+    public float maxX;
+    public float minY;
+    public float maxY;
 
     private void Start() 
     {

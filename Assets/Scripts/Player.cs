@@ -8,8 +8,8 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animate;
     private Vector2 moveAmount;
-    [SerializeField] public float health;
-    [SerializeField] public float playerSpeed;
+    public float health;
+    public float playerSpeed;
 
     private void Start() 
     {

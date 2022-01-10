@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    [SerializeField] public GameObject projectile;
-    [SerializeField] public Transform shotPoint;
-    [SerializeField] public float timeBetweenShots;
+    public GameObject projectile;
+    public Transform shotPoint;
+    public float timeBetweenShots;
     private float shotTime;
     
     private void Update()

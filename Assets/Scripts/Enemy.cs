@@ -7,12 +7,12 @@ public class Enemy : MonoBehaviour
     [HideInInspector]
     public Transform player;
 
-    [SerializeField] public int health;
-    [SerializeField] public float speed;
-    [SerializeField] public float timeBetweenAttacks;
-    [SerializeField] public int damage;
+    public int health;
+    public float speed;
+    public float timeBetweenAttacks;
+    public int damage;
 
-    private void Start() 
+    public virtual void Start() 
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
